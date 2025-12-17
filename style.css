@@ -1,22 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #87CEEB;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5; /* Facebook light grey */
     padding: 20px;
 }
 
 .container {
-    background: white;
+    background: #ffffff;
     max-width: 550px;
     margin: 0 auto;
-    padding: 20px;
-    border: 3px solid #333;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    background: #FF6B6B;
+    background: #1877f2; /* Facebook blue */
     color: white;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    text-align: center;
 }
 
 .header h1 {
@@ -26,39 +29,55 @@ body {
 
 .header p {
     font-size: 14px;
+    opacity: 0.9;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-weight: bold;
+    color: #050505;
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 8px;
-    border: 2px solid #333;
+    padding: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
     font-size: 14px;
+    background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 1px #1877f2;
 }
 
 .radio-option {
     display: inline-block;
     margin-right: 15px;
+    color: #1c1e21;
+}
+
+.checkbox-group label {
+    color: #1c1e21;
 }
 
 .error-message {
-    color: red;
+    color: #d93025;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 6px;
     display: none;
-    background: #FFE5E5;
-    padding: 5px;
-    border: 1px solid red;
+    background: #fdecea;
+    padding: 6px;
+    border-radius: 4px;
 }
 
 .error-message.show {
@@ -66,30 +85,34 @@ body {
 }
 
 .input-error {
-    border-color: red;
-    background-color: #FFE5E5;
+    border-color: #d93025;
+    background-color: #fdecea;
 }
 
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background: #4CAF50;
+    background: #1877f2;
     color: white;
-    border: 2px solid #333;
+    border: none;
+    border-radius: 6px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
-    background: #45a049;
+    background: #166fe5;
 }
 
 .output-container {
     display: none;
     margin-top: 25px;
-    padding: 15px;
-    background: #D4EDDA;
-    border: 3px solid #28A745;
+    padding: 18px;
+    background: #e7f3ff;
+    border-left: 5px solid #1877f2;
+    border-radius: 6px;
 }
 
 .output-container.show {
@@ -97,7 +120,17 @@ body {
 }
 
 .success-title {
-    color: green;
+    color: #1877f2;
     font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.output-item {
+    margin: 8px 0;
+    color: #050505;
+}
+
+.output-label {
     font-weight: bold;
 }
