@@ -1,12 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f2f5; /* Facebook light grey */
+    background-color: #f0f2f5;
     padding: 20px;
 }
 
 .container {
     background: #ffffff;
-    max-width: 550px;
+    max-width: 520px;
     margin: 0 auto;
     padding: 25px;
     border-radius: 8px;
@@ -14,7 +18,7 @@ body {
 }
 
 .header {
-    background: #1877f2; /* Facebook blue */
+    background: #1877f2;
     color: white;
     padding: 20px;
     margin-bottom: 25px;
@@ -23,8 +27,8 @@ body {
 }
 
 .header h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
+    font-size: 22px;
+    margin-bottom: 6px;
 }
 
 .header p {
@@ -32,6 +36,7 @@ body {
     opacity: 0.9;
 }
 
+/* Form groups */
 .form-group {
     margin-bottom: 18px;
 }
@@ -43,14 +48,15 @@ body {
     color: #050505;
 }
 
-.form-group input,
+/* Inputs */
+.form-group input[type="text"],
+.form-group input[type="email"],
 .form-group select {
     width: 100%;
-    padding: 10px;
+    padding: 10px 12px;
     border: 1px solid #ccd0d5;
     border-radius: 6px;
     font-size: 14px;
-    background-color: #ffffff;
 }
 
 .form-group input:focus,
@@ -60,16 +66,35 @@ body {
     box-shadow: 0 0 0 1px #1877f2;
 }
 
+/* Gender radio buttons */
+.radio-group {
+    display: flex;
+    gap: 25px;
+    margin-top: 6px;
+}
+
 .radio-option {
-    display: inline-block;
-    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
     color: #1c1e21;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
 }
 
 .checkbox-group label {
+    font-weight: normal;
     color: #1c1e21;
 }
 
+/* Errors */
 .error-message {
     color: #d93025;
     font-size: 12px;
@@ -89,6 +114,7 @@ body {
     background-color: #fdecea;
 }
 
+/* Submit button */
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -106,6 +132,7 @@ body {
     background: #166fe5;
 }
 
+/* Output */
 .output-container {
     display: none;
     margin-top: 25px;
