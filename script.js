@@ -1,53 +1,62 @@
-const form = document.getElementById("registrationForm");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const courseSelect = document.getElementById("course");
-const termsCheckbox = document.getElementById("terms");
-const outputContainer = document.getElementById("outputContainer");
+const form = document.getElementById('registrationForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const courseSelect = document.getElementById('course');
+const termsCheckbox = document.getElementById('terms');
+const outputContainer = document.getElementById('outputContainer');
 
-form.addEventListener("submit", function (e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    document.querySelectorAll(".error-message").forEach(el => el.classList.remove("show"));
-    document.querySelectorAll(".input-error").forEach(el => el.classList.remove("input-error"));
+    document.querySelectorAll('.error-message').forEach(err => err.classList.remove('show'));
+    document.querySelectorAll('.input-error').forEach(inp => inp.classList.remove('input-error'));
 
-    let valid = true;
+    let isValid = true;
 
-    if (nameInput.value.trim() === "") {
-        document.getElementById("nameError").classList.add("show");
-        nameInput.classList.add("input-error");
-        valid = false;
+    if (nameInput.value.trim() === '') {
+        document.getElementById('nameError').classList.add('show');
+        nameInput.classList.add('input-error');
+        isValid = false;
     }
 
-    if (!emailInput.value.includes("@")) {
-        document.getElementById("emailError").classList.add("show");
-        emailInput.classList.add("input-error");
-        valid = false;
+    const emailValue = emailInput.value.trim();
+    if (emailValue === '' || !emailValue.includes('@') || !emailValue.includes('.')) {
+        document.getElementById('emailError').classList.add('show');
+        emailInput.classList.add('input-error');
+        isValid = false;
     }
 
-    const gender = document.querySelector('input[name="gender"]:checked');
-    if (!gender) {
-        document.getElementById("genderError").classList.add("show");
-        valid = false;
+    const genderInputs = document.getElementsByName('gender');
+    let selectedGender = '';
+
+    for (let g of genderInputs) {
+        if (g.checked) {
+            selectedGender = g.value;
+        }
     }
 
-    if (courseSelect.value === "") {
-        document.getElementById("courseError").classList.add("show");
-        courseSelect.classList.add("input-error");
-        valid = false;
+    if (selectedGender === '') {
+        document.getElementById('genderError').classList.add('show');
+        isValid = false;
+    }
+
+    if (courseSelect.value === '') {
+        document.getElementById('courseError').classList.add('show');
+        courseSelect.classList.add('input-error');
+        isValid = false;
     }
 
     if (!termsCheckbox.checked) {
-        document.getElementById("termsError").classList.add("show");
-        valid = false;
+        document.getElementById('termsError').classList.add('show');
+        isValid = false;
     }
 
-    if (valid) {
-        document.getElementById("outputName").textContent = nameInput.value;
-        document.getElementById("outputEmail").textContent = emailInput.value;
-        document.getElementById("outputGender").textContent = gender.value;
-        document.getElementById("outputCourse").textContent = courseSelect.value;
+    if (isValid) {
+        document.getElementById('outputName').textContent = nameInput.value;
+        document.getElementById('outputEmail').textContent = emailInput.value;
+        document.getElementById('outputGender').textContent = selectedGender;
+        document.getElementById('outputCourse').textContent = courseSelect.value;
 
-        outputContainer.classList.add("show");
+        outputContainer.classList.add('show');
     }
 });
