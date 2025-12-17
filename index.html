@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
     <style>
-        * {
+       * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,30 +13,32 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8; /* soft light grey */
+    background-color: #0f172a; /* dark navy */
     padding: 20px;
     line-height: 1.6;
+    color: #e5e7eb;
 }
 
 .container {
     max-width: 600px;
     margin: 40px auto;
-    background: #ffffff;
+    background: #111827; /* dark card */
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 /* Headings */
 h1 {
-    color: #1f2933;
+    color: #f9fafb;
     margin-bottom: 8px;
     font-size: 24px;
     font-weight: 600;
+    text-align: center;
 }
 
 .subtitle {
-    color: #6b7280;
+    color: #9ca3af;
     font-size: 14px;
     margin-bottom: 30px;
     text-align: center;
@@ -50,13 +52,13 @@ h1 {
 label {
     display: block;
     margin-bottom: 6px;
-    color: #374151;
+    color: #d1d5db;
     font-size: 14px;
     font-weight: 500;
 }
 
 label .required {
-    color: #dc2626;
+    color: #f87171;
 }
 
 /* Inputs */
@@ -65,17 +67,22 @@ input[type="email"],
 select {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #374151;
     border-radius: 6px;
     font-size: 14px;
-    background-color: #ffffff;
+    background-color: #020617;
+    color: #f9fafb;
+}
+
+input::placeholder {
+    color: #6b7280;
 }
 
 input:focus,
 select:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 1px #2563eb;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
 }
 
 /* Radio buttons */
@@ -90,7 +97,7 @@ select:focus {
     align-items: center;
     gap: 6px;
     font-weight: normal;
-    color: #374151;
+    color: #d1d5db;
 }
 
 /* Checkbox */
@@ -103,7 +110,7 @@ select:focus {
     align-items: center;
     gap: 8px;
     font-weight: normal;
-    color: #374151;
+    color: #d1d5db;
 }
 
 /* Buttons */
@@ -111,7 +118,7 @@ select:focus {
 .back-btn {
     width: 100%;
     padding: 12px;
-    background-color: #2563eb; /* soft professional blue */
+    background-color: #3b82f6;
     color: white;
     border: none;
     border-radius: 6px;
@@ -123,12 +130,12 @@ select:focus {
 
 .submit-btn:hover,
 .back-btn:hover {
-    background-color: #1d4ed8;
+    background-color: #2563eb;
 }
 
 /* Errors */
 .error {
-    color: #dc2626;
+    color: #f87171;
     font-size: 13px;
     margin-top: 5px;
     display: none;
@@ -136,12 +143,12 @@ select:focus {
 
 /* Note */
 .note {
-    background-color: #f9fafb;
-    border-left: 4px solid #2563eb;
+    background-color: #020617;
+    border-left: 4px solid #3b82f6;
     padding: 12px;
     margin-top: 20px;
     font-size: 13px;
-    color: #4b5563;
+    color: #9ca3af;
 }
 
 /* Success Page */
@@ -157,23 +164,23 @@ select:focus {
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #1f2937;
 }
 
 .success-icon {
     font-size: 48px;
-    color: #16a34a;
+    color: #22c55e;
     margin-bottom: 10px;
 }
 
 .success-message {
-    color: #16a34a;
+    color: #22c55e;
     font-size: 22px;
     font-weight: 600;
 }
 
 .success-subtitle {
-    color: #6b7280;
+    color: #9ca3af;
     font-size: 14px;
 }
 
@@ -183,7 +190,7 @@ select:focus {
 }
 
 .details-title {
-    color: #1f2933;
+    color: #f9fafb;
     font-size: 16px;
     margin-bottom: 15px;
     font-weight: 600;
@@ -191,21 +198,22 @@ select:focus {
 
 .detail-row {
     padding: 10px 0;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #1f2937;
     display: flex;
 }
 
 .detail-label {
-    color: #6b7280;
+    color: #9ca3af;
     min-width: 120px;
     font-size: 14px;
 }
 
 .detail-value {
-    color: #1f2933;
+    color: #f9fafb;
     font-size: 14px;
     font-weight: 500;
 }
+
 
     </style>
 </head>
@@ -432,4 +440,5 @@ select:focus {
     </script>
 </body>
 </html>
+
 
